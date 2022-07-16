@@ -36,6 +36,7 @@ mongoose
     `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.3euv3wf.mongodb.net/?retryWrites=true&w=majority`
   )
   .then(() => {
+    console.log(process.env.PORT);
     app.listen(process.env.PORT || 5000);
   })
   .catch((err) => {
