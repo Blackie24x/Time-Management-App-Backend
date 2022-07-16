@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 
   next();
 });
-
+app.get("/message", (req, res) => res.send("ok"));
 app.use("/api/users", usersRoutes);
 app.use("/api/tasks", tasksRoutes);
 app.use("/api/spaces", spacesRoutes);
